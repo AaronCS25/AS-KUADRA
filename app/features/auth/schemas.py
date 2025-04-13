@@ -13,7 +13,6 @@ class LoginResponse (BaseModel):
     full_name: str = Field(..., description="Full name of the user")
     is_active: bool = Field(..., description="Is the user active")
     roles: list[str] = Field(..., description="Roles assigned to the user")
-    token: str = Field(..., description="JWT token for authentication")
 
 class SignupRequest (BaseModel):
     email: EmailStr = Field(..., description="Email address of the user")
