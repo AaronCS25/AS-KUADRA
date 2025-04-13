@@ -12,7 +12,7 @@ class User(SQLModel, table=True):
     email: str = Field(unique=True, index=True, nullable=False)
     full_name: str = Field(unique=True, index=True, nullable=False)
     is_active: bool = Field(default=True)
-    hashed_password: str = Field(nullable=False)
+    password: str = Field(nullable=False)
     roles: List["Role"] = Relationship(back_populates="users", link_model=UserRole)
 
 
